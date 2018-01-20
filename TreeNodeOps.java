@@ -24,11 +24,20 @@ class TreeNodeOps {
 		System.out.println("");
 
 		root.left.left = new TreeNode("four");
-		root.right.left = new TreeNode("five");
-		root.right.right = new TreeNode("six");
-		root.right.left.right = new TreeNode("seven");
-
 		printNode( root );
+		System.out.println("");
+
+		root.right.left = new TreeNode("five");
+		printNode( root );
+		System.out.println("");
+
+		root.right.right = new TreeNode("six");
+		printNode( root );
+		System.out.println("");
+
+		root.right.left.right = new TreeNode("seven");
+		printNode( root );
+		System.out.println("");
 		System.out.println("");
 
 		System.out.println(depth(root));
@@ -54,7 +63,7 @@ class TreeNodeOps {
 			System.out.print(" --)");
 		}
 	}
-
+	
 	int depth(TreeNode root) {
 		return depth(root, 0);
 	}
